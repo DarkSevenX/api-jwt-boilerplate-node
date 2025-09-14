@@ -76,14 +76,14 @@ curl http://localhost:8000/test/protected
 ```bash
 curl -X POST http://localhost:8000/auth/register \
   -H "Content-Type: application/json" \
-  -d '{"username": "testuser", "password": "123456"}'
+  -d '{"username": "testuser", "role": "admin", "password": "123456"}'
 ```
 
 ### Login
 ```bash
 curl -X POST http://localhost:8000/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"username": "testuser", "password": "123456"}'
+  -d '{"username": "testuser", "role": "admin" "password": "123456"}'
 ```
 
 ## 🗄️ Base de Datos
