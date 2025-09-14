@@ -2,6 +2,7 @@ import z from 'zod'
 
 const baseUser = {
   username: z.string().min(1).max(255),
+  role: z.string().min(1).max(255),
   password: z.string().min(1),
 }
 

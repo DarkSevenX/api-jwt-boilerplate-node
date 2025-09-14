@@ -3,6 +3,7 @@ Content-type: application/json
 
 {
   "username": "sora",
+  "role": "admin",
   "password": "123"
 }
 
