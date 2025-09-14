@@ -67,7 +67,8 @@ npm run dev
 curl http://localhost:8000/test/public
 
 # Ruta protegida (requiere JWT token)
-curl http://localhost:8000/test/protected
+curl http://localhost:8000/test/protected \
+    -H "token: <token>"
 ```
 
 ## 🔐 Autenticación
@@ -84,6 +85,28 @@ curl -X POST http://localhost:8000/auth/register \
 curl -X POST http://localhost:8000/auth/login \
   -H "Content-Type: application/json" \
   -d '{"username": "testuser", "role": "admin" "password": "123456"}'
+```
+
+## 🔐 CRUD de usuarios
+
+### Obtener el usuario actual
+```bash
+curl http://localhost:8000/user \
+  -H "token: <token>"
+```
+
+### Actualizar el usuario actual
+```bash
+curl -X PATCH http://localhost:8000/user \
+  -H "token: <token>" \
+  -H "Content-Type: application/json" \
+  -d '{"username": "testuser", "role": "admin"}'
+```
+
+### Eliminar el usuario actual
+```bash
+curl -X DELETE http://localhost:8000/user \
+  -H "token: <token>"
 ```
 
 ## 🗄️ Base de Datos
