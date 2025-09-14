@@ -3,6 +3,7 @@ import showRequests from './middleware/showRequest'
 import cors from 'cors'
 import authRouter from './routes/authRoutes'
 import testRoutes from './routes/testRoutes'
+import userRoutes from './routes/userRoutes'
 
 const app = express()
 const port = process.env.PORT || 8000
@@ -20,6 +21,7 @@ app.get('/ping', (_req: Request, res: Response) => {
 })
 
 app.use('/auth', authRouter)
+app.use('/user', userRoutes)
 app.use('/test', testRoutes)
 
 //TODO: añadir validaciones con zod (listo)
