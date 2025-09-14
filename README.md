@@ -15,7 +15,7 @@ Un boilerplate completo de backend con autenticación JWT y base de datos con Pr
 
 1. **Clona el repositorio**
 ```bash
-git clone <tu-repo>
+git clone https://github.com/DarkSevenX/api-jwt-boilerplate-node
 cd backend-auth
 ```
 
