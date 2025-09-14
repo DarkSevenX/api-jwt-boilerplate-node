@@ -1,0 +1,23 @@
+POST http://localhost:8000/auth/register
+Content-type: application/json
+
+{
+  "username": "sora",
+  "password": "123"
+}
+
+####
+POST http://localhost:8000/auth/login
+Content-type: application/json 
+
+{
+  "username": "sora",
+  "password": "123"
+}
+
+###
+GET http://localhost:8000/test/public
+
+###
+GET http://localhost:8000/test/protected
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzb3JhIiwiaWF0IjoxNzU2MzEyNjYwLCJleHAiOjE3NTYzMTYyNjB9.GCxOWYKdERoHVSrTQN3PDh6FJ9iGOeVNDWq2R5SLbXQ
