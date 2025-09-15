@@ -2,7 +2,7 @@ import { RequestHandler } from 'express'
 import jwt from 'jsonwebtoken'
 
 const verifyToken: RequestHandler = (req, res, next) => {
-  const token = req.params['token']
+  const token = req.headers['token']
 
   try {
     const decoded: any = jwt.verify(
